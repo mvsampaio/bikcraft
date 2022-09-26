@@ -1,91 +1,14 @@
-body {
-  margin: 0px;
-  font-family: Arial, Helvetica, sans-serif;
-}
+@import "./global/global.css";
+@import "./utilidades/tipografia.css";
+@import "./utilidades/cores.css";
 
-ul {
-  margin: 0px;
-  padding: 0px;
-  list-style: none;
-}
+@import "./global/header.css";
 
-a {
-  text-decoration: none;
-}
+/* Utilidades */
+@import "./utilidades/componentes.css";
 
-.header-bg {
-  background-color: #000;
-}
+/* Home */
+@import "./home/introducao.css";
 
-.header {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-  align-items: center;
-  /* O box-sizing irá considerar o max-width com 1200px junto com o padding de 40 (20 de cada lado). Caso não use o box-sizing o valor de max-width deveria ser de 1160px para somar o padding e resultar em 1200px. */
-  box-sizing: border-box;
-  padding: 20px;
-  max-width: 1200px;
-  /* o margin-left e rigth com a opção auto serve para permitir que ao expandir o site as laterais se ajustem para centralizar. */
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.header-menu {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.header-menu a {
-  color: #fff;
-  display: inline-block;
-  /* permite deixar os itens do menu com uma área maior para ser selecionado */
-  padding: 16px 0px;
-  font-size: 18px;
-  position: relative;
-}
-
-.header-menu a::after {
-  content: "";
-  display: block;
-  height: 3px;
-  width: 0%;
-  background-color: #fff;
-  margin-top: 4px;
-  transition: 0.3s;
-  position: absolute;
-}
-
-.header-menu a:hover::after {
-  width: 100%;
-}
-
-@media (max-width: 800px) {
-  .header-menu {
-    gap: 20px;
-  }
-
-  .header-menu a {
-    background-color: #111;
-    padding: 12px 16px;
-    border-radius: 4px;
-  }
-  .header-menu a::after {
-    display: none;
-  }
-  .header-menu a:hover {
-    background-color: #2e2e2e;
-  }
-}
-
-@media (max-width: 600px) {
-  .header-menu {
-    gap: 12px;
-  }
-  .header-menu a {
-    padding: 8px 12px;
-    font-size: 14px;
-  }
-}
+/* Bicicletas */
+@import "./bicicletas/bicicletas-lista.css";
