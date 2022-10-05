@@ -22,7 +22,7 @@
   display: block;
   max-width: 360px;
   height: 2px;
-  color: var(--cor-11);
+  background: var(--cor-11);
   margin-top: 16px;
 }
 
